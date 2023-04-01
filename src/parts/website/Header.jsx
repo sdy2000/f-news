@@ -1,19 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { FaSearch } from 'react-icons/fa'
+import { FaList, FaSearch } from 'react-icons/fa'
+import { IconButton, ThemeButton } from '../../components'
 
 const Header = () => {
   return (
     <>
-      <header className='bg-lbp dark:bg-dbh'>
-        <nav className='container flex justify-between items-start gap-3 p-3 md:pb-1'>
+      <header className='bg-dbh'>
+        <nav className='container flex justify-between items-center gap-3 p-3 md:pb-1'>
 
 
           <div className=''>
-            list
+            <IconButton value={<FaList />} />
           </div>
           <div className='flex justify-center items-center gap-6'>
-            <Link className='logo text-lfp dark:text-dfp text-xl xl:text-3xl font-black' to="/">
+            <Link className='text-dfp text-xl xl:text-3xl font-black' to="/">
               <span className='text-accent'>F</span>
               News
             </Link>
@@ -24,12 +25,12 @@ const Header = () => {
               <li><Link to="#">Contact Us</Link></li>
             </ul>
           </div>
-          <div className=''>
+          <div className='flex justify-center items-center gap-3'>
             <span>
-              moon&sun
+              <ThemeButton />
             </span>
             <span>
-              <FaSearch />
+              <IconButton value={<FaSearch />} />
             </span>
           </div>
 
