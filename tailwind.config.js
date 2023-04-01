@@ -9,6 +9,7 @@ module.exports = {
         // Backround
         "lbp": "#ffffff",
         "lbs": "#f0f0ff",
+        "lbh": "#1E2022",
         // Action
         "lap": "#d5e2f1",
         "las": "#e7f0f8",
@@ -18,13 +19,14 @@ module.exports = {
         "lft": "#a2b0c3",
 
         // accent
-        "accent": "#4364f9",
-        "daccent": "#1f3597",
+        "accent": "#950101",
+        "daccent": "#950101",
 
         // // // Dark Mode // // / 
         // Backround
-        "dbp": "#2d3748",
-        "dbs": "#1a212d",
+        "dbp": "#393E46",
+        "dbs": "#222831",
+        "dbh": "#1E2022",
         // Action
         "dap": "#d5e2f1",
         "das": "#2d3748",
