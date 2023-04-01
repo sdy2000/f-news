@@ -1,9 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaList, FaSearch } from 'react-icons/fa'
+import { IoMdClose } from 'react-icons/io'
 import { IconButton, ThemeButton } from '../../components'
 
 const Header = () => {
+  const [isOpenList, setIsOpenList] = useState(false);
+
+
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      if (window.innerWidth >= 1024) {
+        setIsOpenList(false);
+      }
+    })
+  }, [])
+
+  function OpenList() {
+    (isOpenList === true) ? setIsOpenList(false) : setIsOpenList(true);
+  }
   return (
     <>
       <header className='bg-dbh'>
@@ -11,7 +27,9 @@ const Header = () => {
 
 
           <div className=''>
-            <IconButton value={<FaList />} />
+            <span onClick={OpenList}>
+              <IconButton value={<FaList />} />
+            </span>
           </div>
           <div className='flex justify-center items-center gap-6'>
             <Link className='text-dfp text-xl xl:text-3xl font-black' to="/">
@@ -33,7 +51,39 @@ const Header = () => {
               <IconButton value={<FaSearch />} />
             </span>
           </div>
+          <div className={`mobile-nav fixed inset-0 bg-lbp dark:bg-dbp py-16 px-5 overflow-auto
+                     overscroll-contain z-10 border-l-2 border-l-las dark:border-l-lft lg:hidden
+                     ${!isOpenList ? 'translate-x-[100%] invisible' : 'translate-x-[20%] visible'}`}>
+                      
+            <span onClick={OpenList} className='nav-close-btn absolute top-5 right-[25%]'>
+              <IconButton value={<IoMdClose />} />
+            </span>
+            <div className='mobile-nav-wrapper'>
+              <div className='flex flex-col gap-5 ml-[20%]'>
+                <img
+                  className='rounded-full border-2 border-lfp dark:border-lft'
+                  src="/assets/img/sdy2000.jpg"
+                  alt="User Avatar"
+                  width='120' height='120' />
+                <ul className='flex justify-start items-center gap-2'>
+                  <li><Link to="#">Login</Link></li>
+                  <li>\</li>
+                  <li><Link to="#">singout</Link></li>
+                </ul>
+              </div>
+            </div>
+            <div className='mobile-nav-wrapper'>
+              <h3 className='title'>Main Menu</h3>
+              <ul>
+                <li><Link to="#">Home</Link></li>
+                <li><Link to="#">News</Link></li>
+                <li><Link to="#">Citizen reporter</Link></li>
+                <li><Link to="#">About Us</Link></li>
+                <li><Link to="#">Contact</Link></li>
+              </ul>
+            </div>
 
+          </div>
 
         </nav>
       </header>

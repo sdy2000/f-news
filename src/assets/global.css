@@ -8,6 +8,19 @@
 
 @layer components{
 
+    /*--------------- Header ----------------*/
+    .mobile-nav-wrapper{
+        @apply pb-5 mb-8 border-b border-b-dft
+    }
+    .mobile-nav-wrapper .title{
+        @apply text-xl font-extrabold text-lfp dark:text-dfp mb-4
+    }
+    .mobile-nav-wrapper ul li{
+        @apply mb-2
+    }
+    .mobile-nav-wrapper ul li a{
+        @apply text-base text-lfs dark:text-dfs transition-all duration-300 hover:text-accent dark:hover:text-accent
+    }
 }
 
 
@@ -48,3 +61,6 @@ body {
 }
 
 /*=============== End Base ===============*/
+.mobile-nav {
+    transition: 700ms cubic-bezier(1, 0, 0.3, 0.7);
+}
