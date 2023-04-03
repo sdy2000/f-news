@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaList, FaSearch } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
-import { IconButton, ThemeButton } from '../../components'
+import { IconButton, SearchBox, ThemeButton } from '../../components'
 
 const Header = () => {
   const [isOpenList, setIsOpenList] = useState(false);
@@ -22,21 +22,21 @@ const Header = () => {
   }
   return (
     <>
-      <header className='bg-dbh'>
+      <header className='bg-dbh md:py-2'>
         <nav className='container flex justify-between items-center gap-3 p-3 md:pb-1'>
 
 
-          <div className=''>
+          <div className='lg:hidden'>
             <span onClick={OpenList}>
               <IconButton value={<FaList />} />
             </span>
           </div>
           <div className='flex justify-center items-center gap-6'>
-            <Link className='text-dfp text-xl xl:text-3xl font-black' to="/">
+            <Link className='text-dfp text-xl md:text-2xl lg:text-3xl font-black' to="/">
               <span className='text-accent'>F</span>
               News
             </Link>
-            <ul className='desktop-nav  hidden lg:flex justify-center items-center gap-6 ml-12'>
+            <ul className='desktop-nav text-las lg:text-lg hidden lg:flex justify-center items-center gap-6 ml-12'>
               <li><Link to="#">Home</Link></li>
               <li><Link to="#">Blogs</Link></li>
               <li><Link to="#">About Us</Link></li>
@@ -47,8 +47,26 @@ const Header = () => {
             <span>
               <ThemeButton />
             </span>
-            <span>
+            <span className='xl:hidden'>
               <IconButton value={<FaSearch />} />
+            </span>
+            <span className='hidden xl:inline'>
+              <SearchBox />
+            </span>
+            <span className='hidden lg:inline'>
+              <ul className='flex justify-center items-center gap-1 text-lap'>
+                <li>
+                  <Link to='#'>
+                    Login
+                  </Link>
+                </li>
+                /
+                <li>
+                  <Link to='#'>
+                    Singup
+                  </Link>
+                </li>
+              </ul>
             </span>
           </div>
           <div className={`mobile-nav fixed inset-0 bg-lbp dark:bg-dbp py-16 px-5 overflow-auto
