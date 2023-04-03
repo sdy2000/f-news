@@ -10,3 +10,7 @@ export { default as ModalSearchBox } from './input/ModalSearchBox'
 
 // // // // Modal // // // //
 export { default as SearchBoxModal } from './modal/SearchBoxModal'
+
+
+// // // // Card // // // //
+export { default as LastestNews } from './card/LastestNews'

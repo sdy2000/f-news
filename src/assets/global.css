@@ -64,3 +64,9 @@ body {
 .mobile-nav {
     transition: 700ms cubic-bezier(1, 0, 0.3, 0.7);
 }
+
+.card-shadow{
+    -webkit-box-shadow: inset 0px -70px 72px 12px rgba(0,0,0,0.75);
+    -moz-box-shadow: inset 0px -70px 72px 12px rgba(0,0,0,0.75);
+    box-shadow: inset 0px -70px 72px 12px rgba(0,0,0,0.75);
+}

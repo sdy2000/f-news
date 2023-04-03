@@ -39,7 +39,7 @@ const Header = () => {
             </Link>
             <ul className='desktop-nav text-las lg:text-lg hidden lg:flex justify-center items-center gap-6 ml-12'>
               <li><Link to="#">Home</Link></li>
-              <li><Link to="#">Blogs</Link></li>
+              <li><Link to="#">News</Link></li>
               <li><Link to="#">About Us</Link></li>
               <li><Link to="#">Contact Us</Link></li>
             </ul>
