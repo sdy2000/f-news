@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaList, FaSearch } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
-import { IconButton, SearchBox, ThemeButton } from '../../components'
+import { IconButton, SearchBox, SearchBoxModal, ThemeButton } from '../../components'
 
 const Header = () => {
   const [isOpenList, setIsOpenList] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
 
 
@@ -47,10 +48,10 @@ const Header = () => {
             <span>
               <ThemeButton />
             </span>
-            <span className='xl:hidden'>
+            <span className='xl:hidden' onClick={() => { setIsVisible(true) }}>
               <IconButton value={<FaSearch />} />
             </span>
-            <span className='hidden xl:inline'>
+            <span className='hidden xl:inline' onClick={() => { setIsVisible(true) }}>
               <SearchBox />
             </span>
             <span className='hidden lg:inline'>
@@ -72,7 +73,7 @@ const Header = () => {
           <div className={`mobile-nav fixed inset-0 bg-lbp dark:bg-dbp py-16 px-5 overflow-auto
                      overscroll-contain z-10 border-l-2 border-l-las dark:border-l-lft lg:hidden
                      ${!isOpenList ? 'translate-x-[100%] invisible' : 'translate-x-[20%] visible'}`}>
-                      
+
             <span onClick={OpenList} className='nav-close-btn absolute top-5 right-[25%]'>
               <IconButton value={<IoMdClose />} />
             </span>
@@ -105,6 +106,7 @@ const Header = () => {
 
         </nav>
       </header>
+      {isVisible && <SearchBoxModal onClose={() => setIsVisible(false)} />}
     </>
   )
 }

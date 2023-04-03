@@ -7,8 +7,9 @@ const SearchBox = () => {
         <div className='flex justify-center items-center gap-1 bg-dbs rounded-3xl overflow-hidden w-64 px-2'>
             <IconButton value={<FaSearch />} />
             <input
-                className='w-full bg-dbs px-2 text-lap'
-                type='text' />
+                className='w-full bg-dbs px-2 text-lap outline-none'
+                type='text'
+                readOnly />
         </div>
     )
 }
