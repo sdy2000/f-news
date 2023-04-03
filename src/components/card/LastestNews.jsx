@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const LastestNews = ({ news }) => {
     return (
-        <Link className='relative col-span-1 row-span-1 overflow-hidden hover:scale-110' to='#'>
+        <Link className='relative' to='#'>
             <img
                 className='h-64 md:h-full object-cover'
                 src={`/assets/img/${news.image}`}

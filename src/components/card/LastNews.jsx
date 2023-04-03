@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
 const LastNews = ({ news }) => {
-    const [showImgCard, setShowImgCard] = useState(false)
+    const [showImgCard, setShowImgCard] = useState()
 
     useEffect(() => {
         window.addEventListener('resize', () => {
@@ -14,7 +14,8 @@ const LastNews = ({ news }) => {
     return showImgCard
         ?
         (
-            <Link className='relative col-span-1 row-span-1 overflow-hidden hover:scale-110' to='#'>
+            <Link className='relative col-span-1 row-span-1 overflow-hidden
+             hover:scale-105 transition-all duration-500' to='#'>
                 <img
                     className='h-full object-cover'
                     src={`/assets/img/${news.image}`}
