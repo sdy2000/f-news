@@ -14,12 +14,23 @@ const NewsCard = ({ news }) => {
     return showImgCard
         ?
         (
-            <Link className='sm:w-72 sm:h-44 md:w-96 md:h-52  inline-block p-2 hover:scale-105 ease-in-out duration-500' to='#'>
+            <Link className='relative sm:w-72 md:w-96 inline-block p-2 hover:scale-105 ease-in-out duration-500' to='#'>
                 <img
-                    className='h-full w-full object-cover'
+                    className='sm:h-44 md:h-52 w-full object-cover'
                     src={`/assets/img/${news.image}`}
-                    alt="News img" />
-
+                    alt={news.title} />
+                <div className='card-shadow absolute inset-2 sm:h-44 md:h-52 w-[95%]'></div>
+                <div className='flex flex-col justify-start gap-3 mt-2 px-3 whitespace-normal break-all sm:w-72 md:w-96'>
+                    <h3 className='text-lg font-extrabold xl:text-xl'>
+                        {news.title}
+                    </h3>
+                    <h5 className='hidden md:inline text-base xl:text-lg max-h-52'>
+                        {news.description}
+                    </h5>
+                    <span className='text-lfs self-start border-l-4 border-red-900 pl-3 mt-3'>
+                        {news.category}
+                    </span>
+                </div>
             </Link>
         )
         :
