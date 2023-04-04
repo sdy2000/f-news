@@ -1,6 +1,5 @@
 import React from 'react'
-import { IconButton, LastNews, LastestNews, NewsCard } from '../../components'
-import { MdChevronLeft, MdChevronRight } from 'react-icons/md'
+import { LastNews, LastestNews, NewsScrollBar } from '../../components'
 
 const lastNews = [
   {
@@ -89,14 +88,6 @@ const mianNews = [
 ]
 
 const Home = () => {
-  const slider = document.getElementById('slider');
-
-  const slideLeft = () => {
-    slider.scrollLeft = slider.scrollLeft - 500;
-  }
-  const slideRight = () => {
-    slider.scrollLeft = slider.scrollLeft + 500;
-  }
   return (
     <>
       <div className='container mt-10 md:mt-16 lg:mt-20'>
@@ -113,18 +104,15 @@ const Home = () => {
             }
           </div>
         </div>
+
         {/* // // // // // // News */}
-        <div className='relative grid grid-cols-1 sm:flex sm:justify-start sm:items-center'>
-          <IconButton value={<MdChevronLeft className='hidden sm:inline' size={50} onClick={() => slideLeft()} />} />
-          <div id='slider' className='flex flex-col justify-start items-start gap-3 sm:flex-row
-          w-full h-full sm:overflow-x-scroll sm:scroll sm:whitespace-nowrap sm:scroll-smooth scrollbar-hide'>
-            {
-              mianNews.map(news => (
-                <NewsCard news={news} key={news.newsId} />
-              ))
-            }
-          </div>
-          <IconButton value={<MdChevronRight className='hidden sm:inline' size={50} onClick={() => slideRight()} />} />
+        <div className='flex flex-col justify-start mt-6 sm:gap-6 lg:gap-12'>
+          <h2 className='text-lg font-bold md:text-xl md:font-extrabold lg:text-2xl xl:text-3xl border-l-4 border-red-900 pl-3'>
+            News
+          </h2>
+
+          <NewsScrollBar mianNews={mianNews} />
+
         </div>
       </div>
     </>
