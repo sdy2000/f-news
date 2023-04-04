@@ -15,3 +15,4 @@ export { default as SearchBoxModal } from './modal/SearchBoxModal'
 // // // // Card // // // //
 export { default as LastNews } from './card/LastNews'
 export { default as LastestNews } from './card/LastestNews'
+export { default as NewsCard } from './card/NewsCard'
