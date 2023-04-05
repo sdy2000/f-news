@@ -20,3 +20,7 @@ export { default as NewsCard } from './card/NewsCard'
 
 // // // // Scroll Bar // // // //
 export { default as NewsScrollBar } from './scrollBar/NewsScrollBar'
+
+
+// // // // Home Page Section // // // //
+export { default as NewsType } from './homePageSection/NewsType'

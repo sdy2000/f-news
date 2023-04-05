@@ -1,5 +1,5 @@
 import React from 'react'
-import { LastNews, LastestNews, NewsScrollBar } from '../../components'
+import { LastNews, LastestNews, NewsScrollBar, NewsType } from '../../components'
 
 const lastNews = [
   {
@@ -87,6 +87,92 @@ const mianNews = [
   },
 ]
 
+const reverseMianNews = [
+  {
+    newsId: 5,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wp4026879.jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 4,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wallpaperflare.com_wallpaper (20).jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 3,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wallpaperflare.com_wallpaper (17).jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 2,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wallpaperflare.com_wallpaper (11).jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 1,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'img3.jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+]
+
+const weedendReasd = [
+  {
+    newsId: 3,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wallpaperflare.com_wallpaper (17).jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 1,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'img3.jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 4,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wallpaperflare.com_wallpaper (20).jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 5,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wp4026879.jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 2,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wallpaperflare.com_wallpaper (11).jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+]
+
 const Home = () => {
   return (
     <>
@@ -106,14 +192,14 @@ const Home = () => {
         </div>
 
         {/* // // // // // // News */}
-        <div className='flex flex-col justify-start mt-6 sm:gap-6 lg:gap-12'>
-          <h2 className='text-lg font-bold md:text-xl md:font-extrabold lg:text-2xl xl:text-3xl border-l-4 border-red-900 pl-3'>
-            News
-          </h2>
+        <NewsType newsName={'News'} data={mianNews} color={'border-red-900'} />
 
-          <NewsScrollBar mianNews={mianNews} />
+        {/* // // // // // // News */}
+        <NewsType newsName={'Sport'} data={reverseMianNews} color={' border-yellow-500'} />
 
-        </div>
+        {/* // // // // // // Weekend Reads */}
+        <NewsType newsName={'Weedend Reads'} data={weedendReasd} color={' border-blue-600'} />
+
       </div>
     </>
   )
