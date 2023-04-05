@@ -70,3 +70,8 @@ body {
     -moz-box-shadow: inset 0px -70px 72px 12px rgba(0,0,0,0.75);
     box-shadow: inset 0px -70px 72px 12px rgba(0,0,0,0.75);
 }
+
+.reel-news-bg{
+    background: rgb(26,26,26);
+    background: linear-gradient(180deg, rgba(26,26,26,1) 13%, rgba(178,178,178,1) 100%);
+}
