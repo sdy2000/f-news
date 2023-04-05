@@ -1,5 +1,5 @@
 import React from 'react'
-import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, ReelNews } from '../../components'
+import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, ReelNews, NewSection } from '../../components'
 import { HiArrowLongRight, HiArrowRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 
@@ -290,29 +290,7 @@ const Home = () => {
       </div>
 
       {/* // // // // // // Reel News */}
-      <div className='reel-news-bg mt-10 md:mt-16 lg:mt-20 mb-6'>
-        <div className='container flex flex-col justify-start py-12'>
-          <div className='flex justify-between items-center'>
-            <h2 className='text-5xl font-semibold text-white'>
-              REEL
-            </h2>
-            <span className='flex justify-center items-center text-white rounded-2xl
-             border border-white bg-none px-3 py-1 text-lg font-semibold '>
-              Visit Reel <HiArrowRight />
-            </span>
-          </div>
-          <span className='text-white font-medium'>
-            The most amazing videos from the FNews
-          </span>
-          <div className='flex flex-col sm:flex-row justify-center items-center gap-6 sm:gap-3 mt-6'>
-            {
-              reelNews.map(news => (
-                <ReelNews news={news} key={news.newsId} />
-              ))
-            }
-          </div>
-        </div>
-      </div>
+      <NewSection title={'REEL'} description={'The most amazing videos from the FNews'} lastNews={reelNews} />
 
       {/* // // // // // // Editor's Picks */}
       <div className='container'>
@@ -348,6 +326,10 @@ const Home = () => {
 
         </div>
       </div>
+
+
+      {/* // // // // // // Reel News */}
+      <NewSection title={'Future Planet'} description={'The most amazing videos from the FNews'} lastNews={reelNews} />
     </>
   )
 }

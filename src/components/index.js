@@ -26,6 +26,7 @@ export { default as NewsScrollBar } from './scrollBar/NewsScrollBar'
 
 // // // // Home Page Section // // // //
 export { default as NewsType } from './homePageSection/NewsType'
+export { default as NewSection } from './homePageSection/NewSection'
 
 
 // // // // List // // // //
