@@ -24,7 +24,7 @@ const NewsCardSmall = ({ news }) => {
                     <h3 className='text-lg font-extrabold xl:text-xl'>
                         {news.title}
                     </h3>
-                    <h5 className='hidden md:inline text-base xl:text-lg max-h-[4.5rem] overflow-hidden'>
+                    <h5 className='hidden md:inline text-base xl:text-lg max-h-[4.5rem] lg:max-h-20 overflow-hidden'>
                         {news.description}
                     </h5>
                     <span className='text-lfs self-start border-l-4 border-red-900 pl-3 mt-3'>

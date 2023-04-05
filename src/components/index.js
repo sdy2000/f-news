@@ -29,4 +29,4 @@ export { default as NewsType } from './homePageSection/NewsType'
 
 
 // // // // List // // // //
-export { default as LastestList } from './list/LastestList'
+export { default as ListLastest } from './list/ListLastest'
