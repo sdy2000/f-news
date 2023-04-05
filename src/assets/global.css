@@ -21,6 +21,11 @@
     .mobile-nav-wrapper ul li a{
         @apply text-base text-lfs dark:text-dfs transition-all duration-300 hover:text-accent dark:hover:text-accent
     }
+
+    /*--------------- News List ----------------*/
+    .news-list li{
+        @apply odd:bg-llist even:bg-dlist text-lap
+    }
 }
 
 

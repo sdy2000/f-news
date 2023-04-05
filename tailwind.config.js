@@ -18,9 +18,15 @@ module.exports = {
         "lfs": "#697586",
         "lft": "#a2b0c3",
 
-        // accent
+        // Oder
         "accent": "#950101",
         "daccent": "#950101",
+        "orange": "#d73210",
+        "dorange": "#90200a",
+
+        // List Color
+        "llist": "#363636",
+        "dlist": "#2F2F2F",
 
         // // // Dark Mode // // / 
         // Backround

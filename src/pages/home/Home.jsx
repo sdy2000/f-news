@@ -1,5 +1,5 @@
 import React from 'react'
-import { LastNews, LastestNews, NewsCardSmall, NewsType, ReelNews } from '../../components'
+import { LastNews, LastestList, LastestNews, NewsCardSmall, NewsType, ReelNews } from '../../components'
 import { HiArrowLongRight, HiArrowRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 
@@ -340,10 +340,10 @@ const Home = () => {
                 }
               </div>
             </div>
+          </div>
 
-            <div className='col-span-1'>
-
-            </div>
+          <div className='col-span-1 relative'>
+            <LastestList />
           </div>
 
         </div>
