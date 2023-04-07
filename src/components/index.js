@@ -24,6 +24,7 @@ export { default as LastestVideoNews } from './card/LastestVideoNews'
 
 // // // // Scroll Bar // // // //
 export { default as NewsScrollBar } from './scrollBar/NewsScrollBar'
+export { default as VideoScrollbar } from './scrollBar/VideoScrollbar'
 
 
 // // // // Home Page Section // // // //

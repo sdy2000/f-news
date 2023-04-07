@@ -1,5 +1,5 @@
 import React from 'react'
-import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, NewSection, NewsCard2, LastestVideoNews, NewsScrollBar } from '../../components'
+import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, NewSection, NewsCard2, LastestVideoNews, NewsScrollBar, VideoScrollbar } from '../../components'
 import { HiArrowLongRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 
@@ -388,7 +388,7 @@ const Home = () => {
         <div className='flex flex-col justify-start mt-3 bg-llist'>
           <LastestVideoNews news={videoNews} />
 
-          <NewsScrollBar mianNews={sportNews} />
+          <VideoScrollbar mianNews={sportNews} />
         </div>
       </div>
     </>
