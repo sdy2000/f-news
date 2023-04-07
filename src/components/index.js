@@ -16,6 +16,7 @@ export { default as SearchBoxModal } from './modal/SearchBoxModal'
 export { default as LastNews } from './card/LastNews'
 export { default as LastestNews } from './card/LastestNews'
 export { default as NewsCard } from './card/NewsCard'
+export { default as NewsCard2 } from './card/NewsCard2'
 export { default as NewsCardSmall } from './card/NewsCardSmall'
 export { default as ReelNews } from './card/ReelNews'
 

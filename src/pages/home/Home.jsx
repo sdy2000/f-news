@@ -1,6 +1,6 @@
 import React from 'react'
-import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, ReelNews, NewSection } from '../../components'
-import { HiArrowLongRight, HiArrowRight } from 'react-icons/hi2'
+import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, NewSection, NewsCard2 } from '../../components'
+import { HiArrowLongRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 
 const lastNews = [
@@ -262,6 +262,27 @@ const editorPicks = [
   },
 ]
 
+const businessNews = [
+  {
+    newsId: 1,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'img3.jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    about: 'Lorem and Lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+  {
+    newsId: 2,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wallpaperflare.com_wallpaper (11).jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    about: 'Lorem and Lorem',
+    description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+  },
+]
+
 const Home = () => {
   return (
     <>
@@ -290,7 +311,10 @@ const Home = () => {
       </div>
 
       {/* // // // // // // Reel News */}
-      <NewSection title={'REEL'} description={'The most amazing videos from the FNews'} lastNews={reelNews} />
+      <NewSection
+        title={'REEL'}
+        description={'The most amazing videos from the FNews'}
+        lastNews={reelNews} />
 
       {/* // // // // // // Editor's Picks */}
       <div className='container'>
@@ -329,7 +353,22 @@ const Home = () => {
 
 
       {/* // // // // // // Reel News */}
-      <NewSection title={'Future Planet'} description={'The most amazing videos from the FNews'} lastNews={reelNews} />
+      <NewSection
+        title={'Future Planet'}
+        description={'The most amazing videos from the FNews'}
+        lastNews={reelNews} />
+
+      {/* // // // // // //  Business News */}
+      <div className='container my-12'>
+        <div className='flex flex-col sm:flex-row justify-center items-center gap-3'>
+          {
+            businessNews.map(news => (
+              <NewsCard2 news={news} />
+            ))
+          }
+        </div>
+      </div>
+
     </>
   )
 }
