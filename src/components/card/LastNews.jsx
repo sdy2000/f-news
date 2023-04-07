@@ -35,7 +35,7 @@ const LastNews = ({ news }) => {
         )
         :
         (
-            <Link className='border-b-2 border-las pb-2 mb-2 text-sm font-semibold xs:text-base xs:font-bold' to='#'>
+            <Link className=' border-b-2 border-las pb-2 mb-2 text-sm font-semibold xs:text-base xs:font-bold' to='#'>
                 <h2 className=''>
                     {news.title}
                 </h2>

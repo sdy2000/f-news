@@ -1,5 +1,5 @@
 import React from 'react'
-import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, NewSection, NewsCard2 } from '../../components'
+import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, NewSection, NewsCard2, LastestVideoNews, NewsScrollBar } from '../../components'
 import { HiArrowLongRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 
@@ -266,7 +266,7 @@ const businessNews = [
   {
     newsId: 1,
     title: 'Lorem ipsum dolor sit amet consectetur',
-    image: 'img3.jpg',
+    image: 'img1.jpg',
     slug: 'dolor-sit',
     category: 'lorem',
     about: 'Lorem and Lorem',
@@ -282,6 +282,16 @@ const businessNews = [
     description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
   },
 ]
+
+const videoNews = {
+  newsId: 1,
+  title: 'Lorem ipsum dolor sit amet consectetur',
+  video: 'test-video.mp4',
+  slug: 'dolor-sit',
+  category: 'lorem',
+  description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore consectetur nisi earum, id eum non.'
+}
+
 
 const Home = () => {
   return (
@@ -300,6 +310,7 @@ const Home = () => {
             }
           </div>
         </div>
+
         {/* // // // // // // News */}
         <NewsType newsName={'News'} data={mianNews} color={'border-red-900'} />
 
@@ -369,6 +380,17 @@ const Home = () => {
         </div>
       </div>
 
+      {/* // // // // // //  Video News */}
+      <div className='container my-12'>
+        <span className='self-start text-lg font-bold md:text-2xl md:font-extrabold lg:text-3xl border-l-4 border-blue-900 pl-3'>
+          Featured video
+        </span>
+        <div className='flex flex-col justify-start mt-3 bg-llist'>
+          <LastestVideoNews news={videoNews} />
+
+          <NewsScrollBar mianNews={sportNews} />
+        </div>
+      </div>
     </>
   )
 }
