@@ -20,7 +20,8 @@ const NewsCard = ({ news }) => {
     return showImgCard
         ?
         (
-            <Link className='relative w-full inline-block p-2 hover:scale-105 ease-in-out duration-500' to='#'>
+            <Link className='relative w-full inline-block p-2 hover:scale-105 ease-in-out duration-500'
+             to={`/news/${news.slug}`}>
                 <img
                     className='sm:h-36 md:h-40 w-full object-cover'
                     src={`/assets/img/${news.image}`}
@@ -41,7 +42,7 @@ const NewsCard = ({ news }) => {
         )
         :
         (
-            <XsNewsCard title={news.title} category={news.category} />
+            <XsNewsCard title={news.title} category={news.category} slug={news.slug} />
         )
 }
 

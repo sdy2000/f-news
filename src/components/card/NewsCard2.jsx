@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const NewsCard2 = ({ news }) => {
     return (
-        <Link className=' w-full hover:scale-105 duration-500' to='#'>
+        <Link className=' w-full hover:scale-105 duration-500' to={`/news/${news.slug}`}>
             <h3 className=' text-p text-lg font-extrabold xl:text-xl'>
                 {news.about}
             </h3>

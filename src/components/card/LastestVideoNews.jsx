@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const LastestVideoNews = ({ news }) => {
     return (
-        <Link className='relative w-full' to='#'>
+        <Link className='relative w-full' to={`/news/${news.slug}`}>
             <video className='h-64 w-full md:h-full' controls>
                 <source src={`/assets/vide/${news.video}`} />
             </video>

@@ -21,7 +21,7 @@ const LastNews = ({ news }) => {
         ?
         (
             <Link className='relative col-span-1 row-span-1 overflow-hidden
-            hover:scale-105 transition-all duration-500' to='#'>
+            hover:scale-105 transition-all duration-500' to={`/news/${news.slug}`}>
                 <img
                     className='h-full object-cover'
                     src={`/assets/img/${news.image}`}
@@ -40,7 +40,7 @@ const LastNews = ({ news }) => {
         )
         :
         (
-            <XsNewsCard title={news.title} category={news.category} />
+            <XsNewsCard title={news.title} category={news.category} slug={news.slug} />
         )
 }
 

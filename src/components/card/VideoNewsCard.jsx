@@ -20,7 +20,8 @@ const VideoNewsCard = ({ news }) => {
     return showImgCard
         ?
         (
-            <Link className='p-4 hover:scale-105 ease-in-out duration-500 flex justify-center items-center' to='#'>
+            <Link className='p-4 hover:scale-105 ease-in-out duration-500 flex justify-center items-center'
+             to={`/news/${news.slug}`}>
                 <div className='relative w-36 h-20 lg:w-44 lg:h-24 xl:w-56 xl:h-32 shadow-lg'>
                     <img
                         className='w-full h-full object-cover'
@@ -40,7 +41,7 @@ const VideoNewsCard = ({ news }) => {
         )
         :
         (
-            <XsNewsCard title={news.title} category={news.category} />
+            <XsNewsCard title={news.title} category={news.category} slug={news.slug} />
         )
 }
 

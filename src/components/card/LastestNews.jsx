@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const LastestNews = ({ news }) => {
     return (
-        <Link className='relative' to='#'>
+        <Link className='relative' to={`/news/${news.slug}`}>
             <img
                 className='h-64 w-full md:h-full object-cover'
                 src={`/assets/img/${news.image}`}
