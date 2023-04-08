@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom'
 
 const NewSection = ({ title, description, lastNews }) => {
     return (
-        <div className='reel-news-bg mt-10 md:mt-16 lg:mt-20 mb-6'>
+        <div className='reel-news-lbg mt-10 md:mt-16 lg:mt-20 mb-6'>
             <div className='container flex flex-col justify-start py-12'>
                 <div className='flex justify-between items-center'>
                     <h2 className='text-5xl font-semibold text-white'>

@@ -30,12 +30,12 @@ module.exports = {
 
         // // // Dark Mode // // / 
         // Backround
-        "dbp": "#393E46",
-        "dbs": "#222831",
-        "dbh": "#1E2022",
+        "dbp": "#2a2a2a",
+        "dbs": "#1a1a1a",
+        "dbh": "#000000",
         // Action
         "dap": "#d5e2f1",
-        "das": "#2d3748",
+        "das": "#2a2a2a",
         // Foreground
         "dfp": "#edf2f7",
         "dfs": "#ccd6e0",

@@ -26,13 +26,13 @@ const NewsCard = ({ news }) => {
                     alt={news.title} />
                 <div className='card-shadow absolute inset-2 sm:h-36 md:h-40 sm:w-56 md:w-72'></div>
                 <div className='flex flex-col justify-start gap-3 mt-2 px-3 whitespace-normal break-all sm:w-56 md:w-72'>
-                    <h3 className='text-lg font-extrabold xl:text-xl'>
+                    <h3 className='text-lg font-extrabold xl:text-xl text-p'>
                         {news.title}
                     </h3>
-                    <h5 className='hidden md:inline text-base xl:text-lg max-h-20 overflow-hidden'>
+                    <h5 className='text-s hidden md:inline text-base xl:text-lg max-h-20 overflow-hidden'>
                         {news.description}
                     </h5>
-                    <span className='text-lfs self-start border-l-4 border-red-900 pl-3 mt-3'>
+                    <span className='text-t self-start border-l-4 border-red-900 pl-3 mt-3'>
                         {news.category}
                     </span>
                 </div>
@@ -40,7 +40,7 @@ const NewsCard = ({ news }) => {
         )
         :
         (
-            <Link className='w-full border-b-2 border-las pb-2 mb-2 text-sm font-semibold xs:text-base xs:font-bold' to='#'>
+            <Link className='w-full border-b-2 border-las dark:border-das pb-2 mb-2 text-sm font-semibold xs:text-base xs:font-bold' to='#'>
                 <h2 className=''>
                     {news.title}
                 </h2>

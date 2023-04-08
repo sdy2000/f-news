@@ -26,7 +26,7 @@ const Header = () => {
   return (
     <>
       <header className={`sticky ${scrollDirection === "down" ? "-top-24" : "top-0"}
-       transition-all duration-500 bg-dbh md:py-2 z-30`}>
+       transition-all duration-500 bg-lbh dark:bg-dbh md:py-2 z-30`}>
         <nav className='container flex justify-between items-center gap-3 p-3 md:pb-1'>
 
 

@@ -298,8 +298,8 @@ const videoNews = {
 
 const Home = () => {
   return (
-    <>
-      <div className='container mt-10 md:mt-16 lg:mt-20'>
+    <div className='bg-s'>
+      <div className='container pt-10 md:pt-16 lg:pt-20'>
         {/* // // // // // // Lastest News */}
         <div className='flex flex-col lg:grid grid-cols-2 gap-3 mb-12'>
           <div className='col-span-1'>
@@ -334,10 +334,10 @@ const Home = () => {
       <div className='container'>
         <div className='flex justify-between items-center mb-6'>
           <h2 className={`text-lg font-bold md:text-xl md:font-extrabold lg:text-2xl xl:text-3xl
-             border-l-4 border-sky-700 pl-3`}>
+             border-l-4 border-sky-700 pl-3 text-p`}>
             Editor's Picks
           </h2>
-          <Link to='#' className='font-bold flex justify-center items-center hover:text-accent duration-500'>
+          <Link to='#' className='text-s font-bold flex justify-center items-center hover:text-accent duration-500'>
             See more <HiArrowLongRight size={25} />
           </Link>
         </div>
@@ -385,7 +385,7 @@ const Home = () => {
 
       {/* // // // // // //  Video News */}
       <div className='container my-12'>
-        <span className='self-start text-lg font-bold md:text-2xl md:font-extrabold lg:text-3xl border-l-4 border-blue-900 pl-3'>
+        <span className='text-p self-start text-lg font-bold md:text-2xl md:font-extrabold lg:text-3xl border-l-4 border-blue-900 pl-3'>
           Featured video
         </span>
         <div className='flex flex-col justify-start mt-3 sm:bg-llist'>
@@ -398,11 +398,11 @@ const Home = () => {
       {/* // // // // // // More around the FNews */}
       <div className='container'>
         <div className='flex justify-between items-center mb-6'>
-          <h2 className={`text-lg font-bold md:text-xl md:font-extrabold lg:text-2xl xl:text-3xl
+          <h2 className={`text-p text-lg font-bold md:text-xl md:font-extrabold lg:text-2xl xl:text-3xl
             border-l-4 border-sky-700 pl-3`}>
             More around the FNews
           </h2>
-          <Link to='#' className='font-bold flex justify-center items-center hover:text-accent duration-500'>
+          <Link to='#' className='text-s font-bold flex justify-center items-center hover:text-accent duration-500'>
             See more <HiArrowLongRight size={25} />
           </Link>
         </div>
@@ -429,7 +429,7 @@ const Home = () => {
 
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

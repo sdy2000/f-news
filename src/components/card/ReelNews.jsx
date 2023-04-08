@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const ReelNews = ({ news }) => {
     return (
-        <Link className='relative hover:scale-105 ease-in-out duration-500 bg-white' to='#'>
+        <Link className='relative hover:scale-105 ease-in-out duration-500 bg-p' to='#'>
             <img
                 className='h-72 sm:h-44 md:h-52 w-full object-cover'
                 src={`/assets/img/${news.image}`}

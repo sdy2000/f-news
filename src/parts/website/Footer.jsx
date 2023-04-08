@@ -5,7 +5,7 @@ import { SocialBox } from '../../components'
 const Footer = () => {
     return (
         <footer className='bg-llist'>
-            <div className='container mt-8 py-6 px-8 flex flex-col justify-start' >
+            <div className='container pt-8 py-6 px-8 flex flex-col justify-start' >
                 <div className='flex flex-col justify-start'>
                     <h2 className='text-lg text-dfp font-bold'>
                         Explore the <span className='text-accent'>F</span>News
