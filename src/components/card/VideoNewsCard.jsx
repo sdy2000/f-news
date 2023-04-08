@@ -21,14 +21,14 @@ const VideoNewsCard = ({ news }) => {
         ?
         (
             <Link className='p-4 hover:scale-105 ease-in-out duration-500 flex justify-center items-center' to='#'>
-                <div className='relative w-36 h-20 lg:w-44 lg:h-24 shadow-lg'>
+                <div className='relative w-36 h-20 lg:w-44 lg:h-24 xl:w-56 xl:h-32 shadow-lg'>
                     <img
                         className='w-full h-full object-cover'
                         src={`/assets/img/${news.image}`}
                         alt={news.title} />
                     <div className='card-shadow absolute inset-0 h-full w-full'></div>
                 </div>
-                <div className='flex flex-col gap-2 pl-3 whitespace-normal break-words w-36 h-24 lg:w-40 lg:h-24 shadow-lg'>
+                <div className='flex flex-col gap-2 xl:gap-5 pl-3 whitespace-normal break-words w-36 h-24 lg:w-40 lg:h-24 xl:w-56 xl:h-32'>
                     <h3 className='text-dfs font-semibold xl:text-xl max-h-20 overflow-hidden'>
                         {news.title}
                     </h3>

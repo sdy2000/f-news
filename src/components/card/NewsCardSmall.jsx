@@ -32,7 +32,7 @@ const NewsCardSmall = ({ news, showDescription = true }) => {
                     </h3>
                     {
                         showDescription &&
-                        <h5 className='text-s hidden md:inline text-base xl:text-lg max-h-[4.5rem] lg:max-h-[4.5rem] overflow-hidden'>
+                        <h5 className='text-s hidden md:inline text-base xl:text-lg max-h-[4.5rem] lg:max-h-20 overflow-hidden'>
                             {news.description}
                         </h5>
                     }
