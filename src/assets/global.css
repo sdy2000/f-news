@@ -21,6 +21,12 @@
     .mobile-nav-wrapper ul li a{
         @apply text-base text-lfs dark:text-dfs transition-all duration-300 hover:text-accent dark:hover:text-accent
     }
+    .socail-icons li{
+        @apply text-xl p-2 rounded-full hover:bg-lft dark:hover:bg-dft transition-all duration-300
+    }
+    .socail-icon{
+        @apply text-xl md:text-2xl
+    }
 
     /*--------------- News List ----------------*/
     .news-list li{

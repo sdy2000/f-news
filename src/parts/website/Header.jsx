@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaList, FaSearch } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
-import { IconButton, SearchBox, SearchBoxModal, ThemeButton } from '../../components'
+import { IconButton, SearchBox, SearchBoxModal, SocialBox, ThemeButton } from '../../components'
 
 const Header = () => {
   const [isOpenList, setIsOpenList] = useState(false);
@@ -100,6 +100,10 @@ const Header = () => {
                 <li><Link to="#">About Us</Link></li>
                 <li><Link to="#">Contact</Link></li>
               </ul>
+            </div>
+
+            <div className='ml-[10%] md:mr-[50%]'>
+              <SocialBox styles={'socail-icons flex items-center justify-center gap-3'} />
             </div>
 
           </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { SocialBox } from '../../components'
 
 const Footer = () => {
     return (
@@ -35,7 +36,12 @@ const Footer = () => {
                         <li><Link to='#'>FNews emails for you</Link></li>
                     </ul>
                 </div>
-                <p className="text-dfp pb-4 md:mt-8">
+
+
+                <div className='py-3 my-5  border-t'>
+                    <SocialBox styles={'socail-icons flex items-center justify-center gap-3'} />
+                </div>
+                <p className="text-dfp pb-4 text-center md:mt-8">
                     &copy; Copyright 2023 <a href="/#"><span className='text-accent'>F</span>News</a>
                 </p>
             </div>

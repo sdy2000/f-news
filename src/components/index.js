@@ -21,6 +21,7 @@ export { default as NewsCardSmall } from './card/NewsCardSmall'
 export { default as ReelNews } from './card/ReelNews'
 export { default as LastestVideoNews } from './card/LastestVideoNews'
 export { default as VideoNewsCard } from './card/VideoNewsCard'
+export { default as SocialBox } from './card/SocialBox'
 
 
 // // // // Scroll Bar // // // //
