@@ -26,6 +26,20 @@
     .news-list li{
         @apply odd:bg-llist even:bg-dlist text-lap
     }
+
+    /*--------------- Footer ----------------*/
+    .footer-list{
+        @apply  flex flex-wrap border-b-2 border-lfs pb-6
+    }
+    .footer-list li{
+        @apply  border-r-2 border-lfs pt-2 text-dfs w-[45%] sm:w-[30%] md:w-[22%] lg:w-[18%] ml-4
+    }
+    .footer-list2{
+        @apply   flex flex-wrap gap-4 text-dfs font-semibold
+    }
+    .footer-list2 li{
+        @apply  w-[45%] sm:w-[30%] md:w-[22%] lg:w-auto pt-2
+    }
 }
 
 
