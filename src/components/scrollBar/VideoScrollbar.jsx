@@ -19,7 +19,7 @@ const VideoScrollbar = ({ vNews }) => {
             <div id='vslider' className='flex flex-col justify-start items-start gap-3 sm:flex-row
                 w-full h-full sm:overflow-x-scroll sm:scroll sm:whitespace-nowrap sm:scroll-smooth scrollbar-hide'>
                 {vNews.map(news => (
-                    <VideoNewsCard news={news} />
+                    <VideoNewsCard news={news} key={news.newsId} />
                 ))}
             </div>
             <IconButton value={<MdChevronRight className='hidden sm:inline' size={50} onClick={() => slideRight()} />} />

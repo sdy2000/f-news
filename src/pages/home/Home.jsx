@@ -377,7 +377,7 @@ const Home = () => {
         <div className='flex flex-col sm:flex-row justify-center items-center gap-3'>
           {
             businessNews.map(news => (
-              <NewsCard2 news={news} />
+              <NewsCard2 news={news} key={news.newsId} />
             ))
           }
         </div>

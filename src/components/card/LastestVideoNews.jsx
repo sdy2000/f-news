@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 const LastestVideoNews = ({ news }) => {
-    console.log(news.newsId);
     return (
         <Link className='relative w-full' to='#'>
             <video className='h-64 w-full md:h-full' controls>

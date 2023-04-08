@@ -8,10 +8,14 @@ const LastNews = ({ news }) => {
         window.addEventListener('resize', () => {
             window.innerWidth >= 650 ?
                 setShowImgCard(true) : setShowImgCard(false);
-            })
-        }, [])
-        
-        
+        })
+    }, [])
+
+    useEffect(() => {
+        window.innerWidth >= 650 ?
+            setShowImgCard(true) : setShowImgCard(false);
+    }, [])
+
     return showImgCard
         ?
         (

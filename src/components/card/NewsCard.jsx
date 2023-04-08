@@ -11,6 +11,11 @@ const NewsCard = ({ news }) => {
         })
     }, [])
 
+    useEffect(() => {
+        window.innerWidth >= 650 ?
+            setShowImgCard(true) : setShowImgCard(false);
+    }, [])
+
     return showImgCard
         ?
         (
