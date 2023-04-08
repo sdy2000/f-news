@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { XsNewsCard } from '..'
 
 const VideoNewsCard = ({ news }) => {
     const [showImgCard, setShowImgCard] = useState()
@@ -39,14 +40,7 @@ const VideoNewsCard = ({ news }) => {
         )
         :
         (
-            <Link className='w-full border-b-2 border-las dark:border-das pb-2 mb-2 text-sm font-semibold xs:text-base xs:font-bold' to='#'>
-                <h2 className=''>
-                    {news.title}
-                </h2>
-                <span className='text-lfs self-start border-l-4 border-red-900 pl-3'>
-                    {news.category}
-                </span>
-            </Link>
+            <XsNewsCard title={news.title} category={news.category} />
         )
 }
 
