@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import { FaList, FaSearch } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
 import { IconButton, SearchBox, SearchBoxModal, SocialBox, ThemeButton } from '../../components'
+import useScrollDirection from '../../utils/windowEvent/useScrollDirection'
 
 const Header = () => {
   const [isOpenList, setIsOpenList] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const scrollDirection = useScrollDirection();
 
 
 
@@ -23,7 +25,8 @@ const Header = () => {
   }
   return (
     <>
-      <header className='bg-dbh md:py-2'>
+      <header className={`sticky ${scrollDirection === "down" ? "-top-24" : "top-0"}
+       transition-all duration-500 bg-dbh md:py-2 z-30`}>
         <nav className='container flex justify-between items-center gap-3 p-3 md:pb-1'>
 
 
