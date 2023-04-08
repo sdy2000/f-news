@@ -1,6 +1,8 @@
 import React from 'react'
-import { LastNews, ListLastest, LastestNews, NewsCardSmall,
-   NewsType, NewSection, NewsCard2, LastestVideoNews, VideoScrollbar } from '../../components'
+import {
+  LastNews, ListLastest, LastestNews, NewsCardSmall,
+  NewsType, NewSection, NewsCard2, LastestVideoNews, VideoScrollbar
+} from '../../components'
 import { HiArrowLongRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 
@@ -390,6 +392,41 @@ const Home = () => {
           <LastestVideoNews news={videoNews} />
 
           <VideoScrollbar vNews={sportNews} />
+        </div>
+      </div>
+
+      {/* // // // // // // More around the FNews */}
+      <div className='container'>
+        <div className='flex justify-between items-center mb-6'>
+          <h2 className={`text-lg font-bold md:text-xl md:font-extrabold lg:text-2xl xl:text-3xl
+            border-l-4 border-sky-700 pl-3`}>
+            More around the FNews
+          </h2>
+          <Link to='#' className='font-bold flex justify-center items-center hover:text-accent duration-500'>
+            See more <HiArrowLongRight size={25} />
+          </Link>
+        </div>
+        <div className='grid grid-cols-1 sm:grid-cols-3 gap-3'>
+
+          <div className='col-span-1 relative'>
+            <ListLastest />
+          </div>
+
+          <div className='col-span-2'>
+            <div className='flex flex-col gap-3 mb-12'>
+              <div className='lg:inline-block'>
+                <LastestNews news={editorPicks.pop()} />
+              </div>
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-4'>
+                {
+                  editorPicks.map(news => (
+                    <NewsCardSmall news={news} key={news.newsId} showDescription={false} />
+                  ))
+                }
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </>

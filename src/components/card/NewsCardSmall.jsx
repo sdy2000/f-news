@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-const NewsCardSmall = ({ news }) => {
+const NewsCardSmall = ({ news, showDescription = true }) => {
     const [showImgCard, setShowImgCard] = useState()
 
     useEffect(() => {
@@ -20,14 +20,17 @@ const NewsCardSmall = ({ news }) => {
                     src={`/assets/img/${news.image}`}
                     alt={news.title} />
                 <div className='card-shadow absolute inset-0 sm:h-28 md:h-32  w-[100%]'></div>
-                <div className='flex flex-col justify-start gap-3 mt-2 px-3 break-all w-[100%]'>
+                <div className='flex flex-col justify-start gap-3 mt-2 px-3 break-words w-[100%]'>
                     <h3 className='text-lg font-extrabold xl:text-xl'>
                         {news.title}
                     </h3>
-                    <h5 className='hidden md:inline text-base xl:text-lg max-h-[4.5rem] lg:max-h-20 overflow-hidden'>
-                        {news.description}
-                    </h5>
-                    <span className='text-lfs self-start border-l-4 border-red-900 pl-3 mt-3'>
+                    {
+                        showDescription &&
+                        <h5 className='hidden md:inline text-base xl:text-lg max-h-[4.5rem] lg:max-h-[4.5rem] overflow-hidden'>
+                            {news.description}
+                        </h5>
+                    }
+                    <span className='text-lfs self-start border-l-4 border-red-900 pl-3'>
                         {news.category}
                     </span>
                 </div>
