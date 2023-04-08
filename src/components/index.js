@@ -20,6 +20,7 @@ export { default as NewsCard2 } from './card/NewsCard2'
 export { default as NewsCardSmall } from './card/NewsCardSmall'
 export { default as ReelNews } from './card/ReelNews'
 export { default as LastestVideoNews } from './card/LastestVideoNews'
+export { default as VideoNewsCard } from './card/VideoNewsCard'
 
 
 // // // // Scroll Bar // // // //

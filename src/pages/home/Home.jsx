@@ -1,5 +1,6 @@
 import React from 'react'
-import { LastNews, ListLastest, LastestNews, NewsCardSmall, NewsType, NewSection, NewsCard2, LastestVideoNews, NewsScrollBar, VideoScrollbar } from '../../components'
+import { LastNews, ListLastest, LastestNews, NewsCardSmall,
+   NewsType, NewSection, NewsCard2, LastestVideoNews, VideoScrollbar } from '../../components'
 import { HiArrowLongRight } from 'react-icons/hi2'
 import { Link } from 'react-router-dom'
 
@@ -385,10 +386,10 @@ const Home = () => {
         <span className='self-start text-lg font-bold md:text-2xl md:font-extrabold lg:text-3xl border-l-4 border-blue-900 pl-3'>
           Featured video
         </span>
-        <div className='flex flex-col justify-start mt-3 bg-llist'>
+        <div className='flex flex-col justify-start mt-3 sm:bg-llist'>
           <LastestVideoNews news={videoNews} />
 
-          <VideoScrollbar mianNews={sportNews} />
+          <VideoScrollbar vNews={sportNews} />
         </div>
       </div>
     </>

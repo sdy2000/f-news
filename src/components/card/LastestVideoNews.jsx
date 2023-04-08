@@ -8,7 +8,7 @@ const LastestVideoNews = ({ news }) => {
             <video className='h-64 w-full md:h-full' controls>
                 <source src={`/assets/vide/${news.video}`} />
             </video>
-            <div className='card-shadow absolute inset-0 flex flex-col justify-end items-end gap-2 px-3 py-4'>
+            <div className='card-shadow absolute inset-0 flex flex-col justify-end items-start gap-2 px-3 py-4'>
                 <h2 className='text-las self-start text-lg font-bold md:text-2xl md:font-extrabold lg:text-3xl'>
                     {news.title}
                 </h2>
