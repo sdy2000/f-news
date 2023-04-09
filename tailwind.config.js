@@ -20,7 +20,7 @@ module.exports = {
 
         // Oder
         "accent": "#950101",
-        "daccent": "#950101",
+        "daccent": "#5b0404",
         "orange": "#d73210",
         "dorange": "#90200a",
 

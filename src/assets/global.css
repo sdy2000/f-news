@@ -64,6 +64,24 @@
     .footer-list2 li{
         @apply  w-[45%] sm:w-[30%] md:w-[22%] lg:w-auto pt-2
     }
+
+
+    /*============================ Post Detail ============================*/
+    /*--------------- Bar ----------------*/
+    .news-bar{
+        @apply hidden sm:flex justify-start items-start w-full h-full sm:overflow-x-scroll
+             sm:whitespace-nowrap sm:scroll-smooth scrollbar-hide
+    }
+    .news-bar li{
+        @apply text-p font-bold pr-2 mr-4 text-dfp border-r-2 border-lft hover:underline
+    }
+    .news-subbar{
+        @apply flex justify-start items-start
+            w-full h-full overflow-x-scroll whitespace-nowrap scroll-smooth scrollbar-hide
+    }
+    .news-subbar li{
+        @apply text-p font-bold pr-2 mr-4 border-r-2 border-lft
+    }
 }
 
 

@@ -28,6 +28,7 @@ export { default as XsNewsCard } from './card/XsNewsCard'
 // // // // Scroll Bar // // // //
 export { default as NewsScrollBar } from './scrollBar/NewsScrollBar'
 export { default as VideoScrollbar } from './scrollBar/VideoScrollbar'
+export { default as PostDetailBar } from './scrollBar/PostDetailBar'
 
 
 // // // // Home Page Section // // // //
