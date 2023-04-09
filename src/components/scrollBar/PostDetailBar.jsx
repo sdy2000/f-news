@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BsListNested } from 'react-icons/bs'
 
 const PostDetailBar = () => {
+    const [isOpenList, setIsOpenList] = useState(false);
+
+
+
+
+    function OpenList() {
+        (isOpenList === true) ? setIsOpenList(false) : setIsOpenList(true);
+    }
+
     return (
         <div className='bg-p'>
             <div className='bg-accent dark:bg-daccent border-b-2 hidden sm:flex'>
@@ -32,11 +41,28 @@ const PostDetailBar = () => {
                     <div className='text-dfp my-2 sm:px-0 sm:pl-3 sm:my-0 sm:py-2
                       sm:border-l-2 border-lft hover:underline'>
                         <span className='flex justify-center items-center rounded-sm border sm:border-none px-3 py-1'>
-                            <BsListNested size={25} /> More
+                            <BsListNested size={25} onClick={() => OpenList()} /> More
                         </span>
                     </div>
                 </div>
             </div>
+
+            <div className={`border-b-2 border-accent duration-700
+             ${!isOpenList ? '-translate-y-[100%] hidden' : 'translate-y-0 visible'} `}>
+                <div className='container py-4'>
+                    <ul className='news-dropbar'>
+                        <li><Link to='#'>Business</Link></li>
+                        <li><Link to='#'>World</Link></li>
+                        <li><Link to='#'>Home</Link></li>
+                        <li><Link to='#'>Science</Link></li>
+                        <li><Link to='#'>Tech</Link></li>
+                        <li><Link to='#'>Video</Link></li>
+                        <li><Link to='#'>Stories</Link></li>
+                        <li><Link to='#'>Climate</Link></li>
+                    </ul>
+                </div>
+            </div>
+
             <div className='container py-2'>
                 <ul className='news-subbar'>
                     <li><Link to='#'>World</Link></li>
