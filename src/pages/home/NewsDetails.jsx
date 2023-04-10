@@ -1,5 +1,5 @@
 import React from 'react'
-import { PostDetailBar, RecentNewsCard, RelatedTopics, TopStroryCard } from '../../components'
+import { NewsCardForDetail, PostDetailBar, RecentNewsCard, RelatedTopics, TopStroryCard } from '../../components'
 import { PostDetail } from '../../parts'
 
 const news = {
@@ -99,6 +99,33 @@ const relatedTopics = [
     'Lorem', 'lorem lorem', 'lorem Lorem', 'Lorem lorem', 'lorem'
 ]
 
+const moreNews = [
+    {
+        newsId: 3,
+        title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
+        image: 'img3.jpg',
+        createDate: '2023/4/10',
+    },
+    {
+        newsId: 4,
+        title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
+        image: 'wallpaperflare.com_wallpaper (11).jpg',
+        createDate: '2023/4/10',
+    },
+    {
+        newsId: 5,
+        title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
+        image: 'wallpaperflare.com_wallpaper (17).jpg',
+        createDate: '2023/4/10',
+    },
+    {
+        newsId: 6,
+        title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
+        image: 'wallpaperflare.com_wallpaper (20).jpg',
+        createDate: '2023/4/10',
+    },
+]
+
 const NewsDetails = () => {
     return (
         <>
@@ -111,12 +138,15 @@ const NewsDetails = () => {
 
                         <div className='flex flex-col gap-6 my-8'>
                             <h3 className='text-p text-2xl font-extrabold'>
-                                Top Stores
+                                Related Topics
                             </h3>
                             <RelatedTopics topics={relatedTopics} />
                         </div>
-                        <div className=''>
-                            More on this story
+                        <div className='flex flex-col gap-6 my-8'>
+                            <h3 className='text-p text-2xl font-extrabold'>
+                                More on this story
+                            </h3>
+                            <NewsCardForDetail moreNews={moreNews} />
                         </div>
                     </div>
 

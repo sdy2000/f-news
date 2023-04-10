@@ -26,6 +26,7 @@ export { default as XsNewsCard } from './card/XsNewsCard'
 // // Card // //
 export { default as RecentNewsCard } from './card/RecentNewsCard'
 export { default as TopStroryCard } from './card/TopStroryCard'
+export { default as NewsCardForDetail } from './card/NewsCardForDetail'
 
 
 // // // // Scroll Bar // // // //
