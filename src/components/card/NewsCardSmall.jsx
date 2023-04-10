@@ -1,21 +1,10 @@
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { XsNewsCard } from "..";
+import useWidthListenerForCard from '../../utils/windowEvent/useWidthListenerForCard';
 
 const NewsCardSmall = ({ news, showDescription = true }) => {
-    const [showImgCard, setShowImgCard] = useState()
-
-    useEffect(() => {
-        window.addEventListener('resize', () => {
-            window.innerWidth >= 650 ?
-                setShowImgCard(true) : setShowImgCard(false);
-        })
-    }, [])
-
-    useEffect(() => {
-        window.innerWidth >= 650 ?
-            setShowImgCard(true) : setShowImgCard(false);
-    }, [])
+    const showImgCard = useWidthListenerForCard();
 
     return showImgCard
         ?
