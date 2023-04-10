@@ -23,6 +23,8 @@ export { default as LastestVideoNews } from './card/LastestVideoNews'
 export { default as VideoNewsCard } from './card/VideoNewsCard'
 export { default as SocialBox } from './card/SocialBox'
 export { default as XsNewsCard } from './card/XsNewsCard'
+// // Card // //
+export { default as RecentNewsCard } from './card/RecentNewsCard'
 
 
 // // // // Scroll Bar // // // //
