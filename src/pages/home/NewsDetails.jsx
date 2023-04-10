@@ -36,37 +36,37 @@ const recentNews = [
     {
         newsId: 1,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'img1.jpg',
         createDate: '2023/4/10',
     },
     {
         newsId: 2,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'img2.jpg',
         createDate: '2023/4/10',
     },
     {
         newsId: 3,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'img3.jpg',
         createDate: '2023/4/10',
     },
     {
         newsId: 4,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'wallpaperflare.com_wallpaper (11).jpg',
         createDate: '2023/4/10',
     },
     {
         newsId: 5,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'wallpaperflare.com_wallpaper (17).jpg',
         createDate: '2023/4/10',
     },
     {
         newsId: 6,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'wallpaperflare.com_wallpaper (20).jpg',
         createDate: '2023/4/10',
     },
     {
@@ -78,19 +78,19 @@ const recentNews = [
     {
         newsId: 8,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'wallpaperflare.com_wallpaper (43).jpg',
         createDate: '2023/4/10',
     },
     {
         newsId: 9,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'wp4026872.jpg',
         createDate: '2023/4/10',
     },
     {
         newsId: 10,
         title: 'Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur',
-        image: 'wallpaperflare.com_wallpaper (22).jpg',
+        image: 'wp4026879.jpg',
         createDate: '2023/4/10',
     },
 ]
@@ -100,8 +100,8 @@ const NewsDetails = () => {
         <>
             <div className='bg-s'>
                 <PostDetailBar />
-                <div className='container grid grid-cols-1 md:grid-cols-3'>
-                    <div className='col-span-1 md:col-span-2'>
+                <div className='container grid grid-cols-1 lg:grid-cols-3'>
+                    <div className='col-span-1 lg:col-span-2'>
                         <PostDetail news={news} />
                     </div>
 
@@ -112,11 +112,13 @@ const NewsDetails = () => {
                             ))
                         } */}
 
-                        {
-                            recentNews.map(news => (
-                                <RecentNewsCard news={news} />
-                            ))
-                        }
+                        <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-3'>
+                            {
+                                recentNews.map(news => (
+                                    <RecentNewsCard news={news} key={news.newsId} />
+                                ))
+                            }
+                        </div>
                     </div>
                 </div>
 
