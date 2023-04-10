@@ -1,5 +1,5 @@
 import React from 'react'
-import { PostDetailBar, RecentNewsCard } from '../../components'
+import { PostDetailBar, RecentNewsCard, TopStroryCard } from '../../components'
 import { PostDetail } from '../../parts'
 
 const news = {
@@ -14,23 +14,23 @@ const news = {
     description: '<div><h1>The Second Example</h1><p>The <strong>rat</strong> hates the <strong>cat</strong></p><p><i>This is something special</i></p><hr/><div><img src="http://localhost:3000/assets/img/img1.jpg" width="500"/></div> <hr/><h4>Just Another Heading</h4></div><div><h1>The Second Example</h1><p>The <strong>rat</strong> hates the <strong>cat</strong></p><p><i>This is something special</i></p><hr/><div></div> <hr/><h4>Just Another Heading</h4></div><div><h1>The Second Example</h1><p>The <strong>rat</strong> hates the <strong>cat</strong></p><p><i>This is something special</i></p><hr/><div></div> <hr/><h4>Just Another Heading</h4></div><div><h1>The Second Example</h1><p>The <strong>rat</strong> hates the <strong>cat</strong></p><p><i>This is something special</i></p><hr/><div><img src="http://localhost:3000/assets/img/img1.jpg" width="500"/></div> <hr/><h4>Just Another Heading</h4></div><div><h1>The Second Example</h1><p>The <strong>rat</strong> hates the <strong>cat</strong></p><p><i>This is something special</i></p><hr/><div></div> <hr/><h4>Just Another Heading</h4></div><div><h1>The Second Example</h1><p>The <strong>rat</strong> hates the <strong>cat</strong></p><p><i>This is something special</i></p><hr/><div></div> <hr/><h4>Just Another Heading</h4></div>',
 }
 
-// const topStores = [
-//     {
-//         newsId: 1,
-//         title: 'Lorem ipsum dolor sit amet consectetur',
-//         createDate: '2023/4/10',,
-//     },
-//     {
-//         newsId: 2,
-//         title: 'Lorem ipsum dolor sit amet consectetur',
-//         createDate: '2023/4/10',,
-//     },
-//     {
-//         newsId: 3,
-//         title: 'Lorem ipsum dolor sit amet consectetur',
-//         createDate: '2023/4/10',,
-//     },
-// ]
+const topStores = [
+    {
+        newsId: 1,
+        title: 'Lorem ipsum dolor sit amet consectetur',
+        createDate: '2023/4/10',
+    },
+    {
+        newsId: 2,
+        title: 'Lorem ipsum dolor sit amet consectetur',
+        createDate: '2023/4/10',
+    },
+    {
+        newsId: 3,
+        title: 'Lorem ipsum dolor sit amet consectetur',
+        createDate: '2023/4/10',
+    },
+]
 
 const recentNews = [
     {
@@ -105,12 +105,15 @@ const NewsDetails = () => {
                         <PostDetail news={news} />
                     </div>
 
-                    <div className='col-span-1 flex flex-col  items-center gap-4'>
-                        {/* {
-                            topStores.map(story => (
-                                <RecentNewsCard news={news} />
-                            ))
-                        } */}
+                    <div className='col-span-1 flex flex-col gap-4'>
+
+                        <div className='flex flex-col sm:flex-row lg:flex-col justify-around gap-3'>
+                            {
+                                topStores.map(story => (
+                                    <TopStroryCard story={story} key={story.newsId} />
+                                ))
+                            }
+                        </div>
 
                         <div className='grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-1 gap-3'>
                             {
@@ -119,6 +122,7 @@ const NewsDetails = () => {
                                 ))
                             }
                         </div>
+
                     </div>
                 </div>
 

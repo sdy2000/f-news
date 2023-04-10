@@ -25,6 +25,7 @@ export { default as SocialBox } from './card/SocialBox'
 export { default as XsNewsCard } from './card/XsNewsCard'
 // // Card // //
 export { default as RecentNewsCard } from './card/RecentNewsCard'
+export { default as TopStroryCard } from './card/TopStroryCard'
 
 
 // // // // Scroll Bar // // // //
