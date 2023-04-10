@@ -77,10 +77,10 @@
     }
 
     .news-dropbar{
-        @apply text-p flex flex-wrap
+        @apply text-p flex flex-wrap text-p font-bold
     }
     .news-dropbar li{
-        @apply border-r-2 border-lfs pt-2 text-dfs w-[45%] sm:w-[30%] md:w-[22%] lg:w-[18%] ml-4
+        @apply border-r-2 border-lfs pt-2 w-[45%] sm:w-[30%] md:w-[22%] lg:w-[18%] ml-4
     }
 
     .news-subbar{

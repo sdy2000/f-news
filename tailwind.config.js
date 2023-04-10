@@ -16,7 +16,7 @@ module.exports = {
         // Foreground
         "lfp": "#232b39",
         "lfs": "#697586",
-        "lft": "#a2b0c3",
+        "lft": "#52565c",
 
         // Oder
         "accent": "#950101",

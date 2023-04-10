@@ -1,7 +1,18 @@
 import React from 'react'
-import { IconButton, PostDetailBar } from '../../components'
-import { BiTimeFive } from 'react-icons/bi'
-import { BsShareFill } from 'react-icons/bs'
+import { PostDetailBar } from '../../components'
+import { PostDetail } from '../../parts'
+
+const news = {
+    newsId: 5,
+    title: 'Lorem ipsum dolor sit amet consectetur',
+    image: 'wallpaperflare.com_wallpaper (22).jpg',
+    slug: 'dolor-sit',
+    category: 'lorem',
+    createDate: '2023/4/10',
+    authorName: 'sajad.Dy',
+    shortDescription:' Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vel, a quod.',
+    description: '<div><h1>The Second Example</h1><p>The <strong>rat</strong> hates the <strong>cat</strong></p><p><i>This is something special</i></p><hr/><div><img src="http://localhost:3000/assets/img/img1.jpg" width="500"/></div> <hr/><h4>Just Another Heading</h4></div>',
+}
 
 
 const NewsDetails = () => {
@@ -9,17 +20,16 @@ const NewsDetails = () => {
         <>
             <div className='bg-s'>
                 <PostDetailBar />
-                <div className='container mt-12 flex flex-col justify-start gap-3'>
-                    <h1 className='text-p text-3xl font-semibold md:text-4xl md:font-bold max-w-3xl mb-4'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit, Eligendi repudiandae.
-                    </h1>
-                    <span className='flex justify-start items-center gap-2 text-s'>
-                        <BiTimeFive size={18} />32 March
-                    </span>
-                    <span className='flex justify-start items-center p-3 bg-orange hover:bg-dorange text-s hover:scale-110 w-12'>
-                        <BsShareFill />
-                    </span>
+                <div className='container grid grid-cols-1 md:grid-cols-3'>
+                    <div className='col-span-1 md:col-span-2'>
+                        <PostDetail news={news} />
+                    </div>
+
+                    <div className='col-span-1 flex flex-col justify-center items-center'>
+                        Most View Post
+                    </div>
                 </div>
+
             </div>
         </>
     )

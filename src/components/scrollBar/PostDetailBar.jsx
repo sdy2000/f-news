@@ -1,12 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { BsListNested } from 'react-icons/bs'
 
 const PostDetailBar = () => {
     const [isOpenList, setIsOpenList] = useState(false);
-
-
-
 
     function OpenList() {
         (isOpenList === true) ? setIsOpenList(false) : setIsOpenList(true);
@@ -40,9 +37,10 @@ const PostDetailBar = () => {
 
                     <div className='text-dfp my-2 sm:px-0 sm:pl-3 sm:my-0 sm:py-2
                       sm:border-l-2 border-lft hover:underline'>
-                        <span className='flex justify-center items-center rounded-sm border sm:border-none px-3 py-1'>
-                            <BsListNested size={25} onClick={() => OpenList()} /> More
-                        </span>
+                        <button onClick={() => OpenList()}
+                            className='flex justify-center items-center rounded-sm border sm:border-none px-3 py-1'>
+                            <BsListNested size={25} /> More
+                        </button>
                     </div>
                 </div>
             </div>
