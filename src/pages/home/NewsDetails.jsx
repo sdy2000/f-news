@@ -1,5 +1,5 @@
 import React from 'react'
-import { PostDetailBar, RecentNewsCard, TopStroryCard } from '../../components'
+import { PostDetailBar, RecentNewsCard, RelatedTopics, TopStroryCard } from '../../components'
 import { PostDetail } from '../../parts'
 
 const news = {
@@ -95,6 +95,10 @@ const recentNews = [
     },
 ]
 
+const relatedTopics = [
+    'Lorem', 'lorem lorem', 'lorem Lorem', 'Lorem lorem', 'lorem'
+]
+
 const NewsDetails = () => {
     return (
         <>
@@ -105,8 +109,11 @@ const NewsDetails = () => {
                         <PostDetail news={news} />
 
 
-                        <div className=''>
-                            Related Topics
+                        <div className='flex flex-col gap-6 my-8'>
+                            <h3 className='text-p text-2xl font-extrabold'>
+                                Top Stores
+                            </h3>
+                            <RelatedTopics topics={relatedTopics} />
                         </div>
                         <div className=''>
                             More on this story

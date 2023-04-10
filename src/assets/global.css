@@ -90,6 +90,14 @@
     .news-subbar li{
         @apply text-p font-bold pr-2 mr-4 border-r-2 border-lft
     }
+
+    /*--------------- Related Topic ----------------*/
+    .topic-list{
+        @apply px-3 flex flex-wrap justify-start items-center gap-4
+    }
+    .topic-list li{
+        @apply bg-p py-1 px-3 rounded-lg hover:text-accent hover:underline font-semibold text-s
+    }
 }
 
 

@@ -41,3 +41,4 @@ export { default as NewSection } from './homePageSection/NewSection'
 
 // // // // List // // // //
 export { default as ListLastest } from './list/ListLastest'
+export { default as RelatedTopics } from './list/RelatedTopics'
