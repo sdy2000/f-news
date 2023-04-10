@@ -9,7 +9,7 @@ const RecentNewsCard = ({ news }) => {
                 alt={news.title}
             />
             <div className='col-span-1 lg:col-span-3 flex flex-col justify-start items-start'>
-                <h4 className='text-p font-semibold col-span-3 font-serif'>
+                <h4 className='text-p lg:text-sm xl:text-base font-semibold col-span-3 font-serif'>
                     {news.title}
                 </h4>
                 <span className='text-t mt-2 lg:mt-4'>

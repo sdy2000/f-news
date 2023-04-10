@@ -8,7 +8,7 @@ const PostDetail = ({ news }) => {
     return (
         <>
             <div className='mt-12 flex flex-col justify-start gap-3'>
-                <h1 className='text-p text-3xl font-semibold md:text-4xl md:font-bold max-w-3xl mb-4'>
+                <h1 className='text-p text-3xl font-semibold md:text-4xl md:font-bold max-w-3xl mb-4 font-serif'>
                     {news.title}
                 </h1>
                 <span className='flex justify-start items-center gap-2 text-s'>
