@@ -12,6 +12,7 @@ export { default as ModalSearchBox } from './input/ModalSearchBox'
 // // // // Modal // // // //
 export { default as SearchBoxModal } from './modal/SearchBoxModal'
 export { default as LoginBoxModal } from './modal/LoginBoxModal'
+export { default as RegisterBoxModal } from './modal/RegisterBoxModal'
 
 
 // // // // Card // // // //

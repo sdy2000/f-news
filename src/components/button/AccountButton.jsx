@@ -1,8 +1,8 @@
 import React from 'react'
 
-const AccountButton = ({value, icon, style}) => {
+const AccountButton = ({value, icon}) => {
     return (
-        <button type='submit' className={`button-ac ${style}`}>
+        <button type='submit' className='button-ac'>
             {value}{icon}
         </button>
     )

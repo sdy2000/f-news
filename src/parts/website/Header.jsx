@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaList, FaSearch } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
-import { IconButton, LoginBoxModal, SearchBox, SearchBoxModal, SocialBox, ThemeButton } from '../../components'
+import { IconButton, LoginBoxModal, RegisterBoxModal, SearchBox, SearchBoxModal, SocialBox, ThemeButton } from '../../components'
 import useScrollDirection from '../../utils/windowEvent/useScrollDirection'
 
 const Header = () => {
   const [isOpenList, setIsOpenList] = useState(false);
   const [isVisibleSearchBox, setIsVisibleSearchBox] = useState(false);
   const [isVisibleLoginBox, setIsVisibleLoginBox] = useState(false);
+  const [isVisibleRegisterBox, setIsVisibleRegisterBox] = useState(false);
   const scrollDirection = useScrollDirection();
 
 
@@ -66,7 +67,7 @@ const Header = () => {
                   </Link>
                 </li>
                 /
-                <li>
+                <li onClick={() => { setIsVisibleRegisterBox(true) }}>
                   <Link to='#'>
                     Singup
                   </Link>
@@ -89,9 +90,9 @@ const Header = () => {
                   alt="User Avatar"
                   width='120' height='120' />
                 <ul className='flex justify-start items-center gap-2'>
-                  <li><Link to="#">Login</Link></li>
+                  <li onClick={() => { setIsVisibleLoginBox(true) }}><Link to="#">Login</Link></li>
                   <li>\</li>
-                  <li><Link to="#">singout</Link></li>
+                  <li onClick={() => { setIsVisibleRegisterBox(true) }}><Link to="#">singout</Link></li>
                 </ul>
               </div>
             </div>
@@ -116,6 +117,7 @@ const Header = () => {
       </header>
       {isVisibleSearchBox && <SearchBoxModal onClose={() => setIsVisibleSearchBox(false)} />}
       {isVisibleLoginBox && <LoginBoxModal onClose={() => setIsVisibleLoginBox(false)} />}
+      {isVisibleRegisterBox && <RegisterBoxModal onClose={() => setIsVisibleRegisterBox(false)} />}
     </>
   )
 }
