@@ -2,9 +2,13 @@ import React from 'react'
 import IconButton from '../button/IconButton'
 import { IoMdClose } from 'react-icons/io'
 import { FiUserCheck } from 'react-icons/fi'
+import { BsEye, BsEyeSlash } from 'react-icons/bs'
 import { AccountButton } from '..'
+import { useState } from 'react'
 
 const LoginBoxModal = ({ onClose }) => {
+    const [isShowPass, setIsShowPass] = useState(false)
+
     return (
         <div className='fixed inset-0 bg-black bg-opacity-25 backdrop-blur-[2px]
         flex justify-center items-center z-50'>
@@ -25,18 +29,39 @@ const LoginBoxModal = ({ onClose }) => {
                                 id='name'
                                 placeholder='Name or Email'
                                 required />
+                            <p className='text-accent text-sm'>
+                                This filed is required !
+                            </p>
                         </div>
 
                         <div className='form-group'>
-                            <label htmlFor="name">User Name :</label>
-                            <input
-                                type='text'
-                                id='name'
-                                placeholder='Name'
-                                required />
+                            <label htmlFor="password">Password :</label>
+                            <div className='flex justify-center items-center w-full bg-s rounded-3xl shadow-lg pr-4'>
+                                <input
+                                    type={isShowPass ? 'text' : 'password'}
+                                    id='password'
+                                    placeholder='Password'
+                                    required />
+                                {
+                                    !isShowPass
+                                        ?
+                                        <BsEye
+                                            onClick={() => { setIsShowPass(true) }}
+                                            className='text-p hover:scale-110 cursor-pointer duration-300'
+                                            size={30} />
+                                        :
+                                        <BsEyeSlash
+                                            onClick={() => { setIsShowPass(false) }}
+                                            className='text-p hover:scale-110 cursor-pointer duration-300'
+                                            size={30} />
+                                }
+                            </div>
+                            <p className='text-accent text-sm'>
+                                This filed is required !
+                            </p>
                         </div>
 
-                        <AccountButton value={'Login'} icon={<FiUserCheck />} style={'mt-6'} />
+                        <AccountButton value={'Login'} icon={<FiUserCheck />} />
 
                     </form>
                 </div>
