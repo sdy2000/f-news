@@ -2,12 +2,13 @@ import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaList, FaSearch } from 'react-icons/fa'
 import { IoMdClose } from 'react-icons/io'
-import { IconButton, SearchBox, SearchBoxModal, SocialBox, ThemeButton } from '../../components'
+import { IconButton, LoginBoxModal, SearchBox, SearchBoxModal, SocialBox, ThemeButton } from '../../components'
 import useScrollDirection from '../../utils/windowEvent/useScrollDirection'
 
 const Header = () => {
   const [isOpenList, setIsOpenList] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
+  const [isVisibleSearchBox, setIsVisibleSearchBox] = useState(false);
+  const [isVisibleLoginBox, setIsVisibleLoginBox] = useState(false);
   const scrollDirection = useScrollDirection();
 
 
@@ -51,15 +52,15 @@ const Header = () => {
             <span>
               <ThemeButton />
             </span>
-            <span className='xl:hidden' onClick={() => { setIsVisible(true) }}>
+            <span className='xl:hidden' onClick={() => { setIsVisibleSearchBox(true) }}>
               <IconButton value={<FaSearch />} />
             </span>
-            <span className='hidden xl:inline' onClick={() => { setIsVisible(true) }}>
+            <span className='hidden xl:inline' onClick={() => { setIsVisibleSearchBox(true) }}>
               <SearchBox />
             </span>
             <span className='hidden lg:inline'>
               <ul className='flex justify-center items-center gap-1 text-lap'>
-                <li>
+                <li onClick={() => { setIsVisibleLoginBox(true) }}>
                   <Link to='#'>
                     Login
                   </Link>
@@ -113,7 +114,8 @@ const Header = () => {
 
         </nav>
       </header>
-      {isVisible && <SearchBoxModal onClose={() => setIsVisible(false)} />}
+      {isVisibleSearchBox && <SearchBoxModal onClose={() => setIsVisibleSearchBox(false)} />}
+      {isVisibleLoginBox && <LoginBoxModal onClose={() => setIsVisibleLoginBox(false)} />}
     </>
   )
 }

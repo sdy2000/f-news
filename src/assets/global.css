@@ -15,6 +15,9 @@
     .bg-s{
         @apply bg-lbs dark:bg-dbs
     }
+    .bg-ac{
+        @apply bg-accent dark:bg-daccent
+    }
     .text-p{
         @apply text-lfp dark:text-dfp
     }
@@ -25,6 +28,10 @@
         @apply text-lft dark:text-dft
     }
 
+    /*--------------- Button ----------------*/
+    .button-ac{
+        @apply bg-ac text-p text-2xl py-2 px-8 rounded-3xl shadow-lg flex justify-center items-center gap-4 hover:scale-110 duration-300
+    }
 
     /*--------------- Header ----------------*/
     .mobile-nav-wrapper{
@@ -44,6 +51,15 @@
     }
     .socail-icon{
         @apply text-xl md:text-2xl
+    }
+    .form-group{
+        @apply  flex flex-col gap-2 w-[100%] sm:w-[80%]
+    }
+    .form-group label{
+        @apply  text-s text-lg
+    }
+    .form-group input{
+        @apply  outline-none text-p text-lg px-4 w-full h-12 bg-s rounded-3xl shadow-lg
     }
 
     /*--------------- News List ----------------*/
