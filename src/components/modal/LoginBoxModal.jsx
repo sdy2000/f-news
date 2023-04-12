@@ -22,14 +22,14 @@ const LoginBoxModal = ({ onClose }) => {
                     </h2>
                     <form className='flex flex-col justify-center items-center gap-6 w-full'>
 
-                        <div className='form-group'>
+                    <div className='form-group'>
                             <label htmlFor="name">UserName or Email :</label>
                             <input
                                 type='text'
                                 id='name'
                                 placeholder='Name or Email'
                                 required />
-                            <p className='text-accent text-sm'>
+                            <p>
                                 This filed is required !
                             </p>
                         </div>
@@ -56,7 +56,7 @@ const LoginBoxModal = ({ onClose }) => {
                                             size={30} />
                                 }
                             </div>
-                            <p className='text-accent text-sm'>
+                            <p>
                                 This filed is required !
                             </p>
                         </div>

@@ -31,7 +31,7 @@ const RegisterBoxModal = ({ onClose }) => {
                                 id='name'
                                 placeholder='User name'
                                 required />
-                            <p className='text-accent text-sm'>
+                            <p>
                                 This filed is required !
                             </p>
                         </div>
@@ -43,7 +43,7 @@ const RegisterBoxModal = ({ onClose }) => {
                                 id='email'
                                 placeholder='User Email'
                                 required />
-                            <p className='text-accent text-sm'>
+                            <p>
                                 This filed is required !
                             </p>
                         </div>
@@ -70,7 +70,7 @@ const RegisterBoxModal = ({ onClose }) => {
                                             size={30} />
                                 }
                             </div>
-                            <p className='text-accent text-sm'>
+                            <p>
                                 This filed is required !
                             </p>
                         </div>
@@ -81,7 +81,7 @@ const RegisterBoxModal = ({ onClose }) => {
                                 <input
                                     type={isShowRePass ? 'text' : 'password'}
                                     id='rePassword'
-                                    placeholder='Password'
+                                    placeholder='RePassword'
                                     required />
                                 {
                                     !isShowRePass
@@ -97,7 +97,7 @@ const RegisterBoxModal = ({ onClose }) => {
                                             size={30} />
                                 }
                             </div>
-                            <p className='text-accent text-sm'>
+                            <p>
                                 This filed is required !
                             </p>
                         </div>
