@@ -11,7 +11,7 @@
 
 ## Made By [sdy2000](https://www.linkedin.com/in/sdy2000/)
 
-MIT © [sdy2000 ](https://github.com/sdy2000)
+In Linkedin [sdy2000](https://github.com/sdy2000)
 
 # Getting Started with Create React App
 
