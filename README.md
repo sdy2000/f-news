@@ -1,9 +1,5 @@
 # FNews Tracker with React JS, TailwindCss
 
-## [Watch Full Tutorial on Youtube here](https://youtu.be/QA6oTpMZp84)
-
-[![crypto](https://user-images.githubusercontent.com/51760520/136682357-5d269bb9-0e36-4f26-a468-fb2963dd9468.png)](https://youtu.be/QA6oTpMZp84)
-
 ## Demo
 
 #### Here is a working live demo : https://dev-log.netlify.app
@@ -13,9 +9,9 @@
 - [React JS](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-[![Piyush Agarwal](https://avatars.githubusercontent.com/u/115455843?v=4)](https://github.com/sdy2000)
+## Made By [sdy2000](https://www.linkedin.com/in/sdy2000/)
 
-MIT © [Piyush Agarwal ](https://github.com/sdy2000)
+MIT © [sdy2000 ](https://github.com/sdy2000)
 
 # Getting Started with Create React App
 
