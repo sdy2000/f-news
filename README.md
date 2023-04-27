@@ -2,7 +2,7 @@
 
 ## Demo
 
-#### Here is a working live demo : https://dev-log.netlify.app
+#### Here is a working live demo : https://f-news.netlify.app
 
 ## Built with
 
