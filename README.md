@@ -13,8 +13,6 @@
 - [React JS](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
 
-## Made By [sdy2000](https://www.youtube.com/channel/UCIPZVAwDGa-A4ZJxCBvXRuQ)
-
 [![Piyush Agarwal](https://avatars.githubusercontent.com/u/115455843?v=4)](https://github.com/sdy2000)
 
 MIT © [Piyush Agarwal ](https://github.com/sdy2000)
